@@ -58,7 +58,7 @@ export default new Vuex.Store({
   },
   actions: {
 
-    getData: function({commit, state}){
+    getDataFetch: function({commit, state}){
       console.log('page: ' + state.url_page);
       console.log('param: ' + state.url_param);
       const URL_PAGE = state.url_page;

@@ -1,56 +1,73 @@
 @import "variables";
 
-.card {
+.cards{
 
-    margin: 2rem 0;
-    .customer{
-        &_info {
-            background-color: $secondary-color;
-            padding: 1rem;
-    
-            .name{
-                font-size: 1.3rem;
-                font-weight: bold;
-                text-decoration: underline;
-                text-transform: uppercase;
-            }
-    
-            .email{
-                margin-top: .3rem ;
-            }
-        }
-        &_cont{
-            padding: 1rem;
-            background-color:$bgc-light;
-            .data{
-                text-align: center;
-                > div{
-                    width: 50%;
-                    padding: 1rem;
-                    .title{
-                        font-weight: bold;
-                        font-size: 1.2rem;
-                        margin-bottom: .5rem;
-                    }
-                    .value{
-                        font-size: 1rem;
-                        svg{
-                            width: 15px;
-                            height: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-                            &.check{
-                                fill: green;
-                            }
-                            &.warning{
-                                fill:red;
-                            }
-                            &.exclamation{
-                                fill: orange;
+    .card {
+
+        margin: 2rem auto;
+        max-width: 600px;
+        width: 100%;
+
+        .customer{
+            &_info {
+                background-color: $secondary-color;
+                padding: 1rem;
+        
+                .name{
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                }
+        
+                .email{
+                    margin-top: .3rem ;
+                }
+            }
+            &_cont{
+                padding: 1rem;
+                background-color:$bgc-light;
+                .data{
+                    text-align: center;
+                    > div{
+                        width: 50%;
+                        padding: 1rem;
+                        .title{
+                            font-weight: bold;
+                            font-size: 1.2rem;
+                            margin-bottom: .5rem;
+                        }
+                        .value{
+                            font-size: 1rem;
+                            svg{
+                                width: 15px;
+                                height: 15px;
+    
+                                &.check{
+                                    fill: green;
+                                }
+                                &.warning{
+                                    fill:red;
+                                }
+                                &.exclamation{
+                                    fill: orange;
+                                }
                             }
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@media screen and (min-width:992px){
+    .cards .card{
+        width: calc(50% - 2rem);
+        margin: 1rem;
     }
 }

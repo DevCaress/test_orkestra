@@ -16,6 +16,11 @@
                 padding: 1rem;
                 font-size: 1.2rem;
                 width: 100%;
+
+                &:active,
+                &:focus-visible{
+                    outline: 1px solid $txt-color-primary;
+                }
             }
             .clear_input {
                 background-color: $secondary-color;
@@ -73,7 +78,7 @@
     .bar_search {
         .btn_search {
             width: 20%;
-            margin: 1rem 0;
+            margin: 0 0 0 1rem;
         }
     }
 }
