@@ -33,7 +33,7 @@ export default new Vuex.Store({
 
         state.pagination = [];
 
-        console.log('current_page: ' + state.current_page);
+        /* console.log('current_page: ' + state.current_page); */
         let counter = 1;
         let btns = 4;
 
@@ -46,21 +46,21 @@ export default new Vuex.Store({
         }
 
         for (let index = 0; index < btns; index++) { 
-          console.log(index);                      
+          /* console.log(index);   */                    
           state.pagination.push(counter);
           counter++;         
         }
       }      
       
-      console.log(state.pagination);
+      /* console.log(state.pagination); */
     }
     
   },
   actions: {
 
-    getDataFetch: function({commit, state}){
-      console.log('page: ' + state.url_page);
-      console.log('param: ' + state.url_param);
+    getData: function({commit, state}){
+      /* console.log('page: ' + state.url_page);
+      console.log('param: ' + state.url_param); */
       const URL_PAGE = state.url_page;
       const URL_PARAM = state.url_param;
       const URL_API = `https://dev.orkestra.mx/api/v1/directory/customers?page=${URL_PAGE}&search=${URL_PARAM}&only_search=1`;
@@ -80,8 +80,8 @@ export default new Vuex.Store({
         state.last_page = data.customers.last_page;
         state.customers.length == 0 ? state.noResults = true : false;
         commit('setPagination');
-        console.log(data.customers.last_page); 
-        console.log(data);
+        /* console.log(data.customers.last_page); 
+        console.log(data); */
       });
     },
   },

@@ -16,7 +16,9 @@
         </div>
       </form>
     </div>
-    <div class="btn_search" @click="[getData()]">buscar</div>
+    <div class="btn_search" >
+      <div class="btn" @click="[getData()]">buscar</div>
+    </div>
   </div>
 </template>
 
@@ -37,7 +39,7 @@ export default {
   },
   watch: {
     value: function () {
-      const btn = document.querySelector(".btn_search").classList;
+      const btn = document.querySelector(".btn").classList;
       const clear = document.querySelector(".clear_input").classList;
       this.value.length >= 3 ? btn.add("active") : btn.remove("active");
       this.value.length >= 3 ? clear.add("active") : clear.remove("active");
