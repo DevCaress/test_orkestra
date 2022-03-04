@@ -1,0 +1,79 @@
+@import "variables";
+
+.bar_search {
+    background-color: $bgc-primary;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+
+    .input {
+        width: 100%;
+
+        form {
+            position: relative;
+
+            .input_search {
+                padding: 1rem;
+                font-size: 1.2rem;
+                width: 100%;
+            }
+            .clear_input {
+                background-color: $secondary-color;
+                border-radius: 50%;
+                color: $txt-color-light;
+                display: none;
+                height: 30px;
+                position: absolute;
+                right: 1rem;
+                width: 30px;
+
+                &.active{
+                    display: flex;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+
+                svg{
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .btn_search {
+        background-color: $btn-disabled;
+        color: $txt-color-light;
+        cursor: not-allowed;
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+
+        &.active {
+            background-color: $primary-color;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bar_search {
+        .btn_search {
+            width: 20%;
+            margin: 1rem 0;
+        }
+    }
+}

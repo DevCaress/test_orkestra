@@ -1,0 +1,64 @@
+@import 'variables';
+
+.controls{
+
+    background-color: $bgc-primary;
+    justify-content: center;
+    margin: 0 0 2rem;
+    /* position: sticky;
+    top: 90px; */
+
+    &::before{
+        background-color:$secondary-color;
+        border-radius: 2px;
+        content: '';
+        height: 5px;
+        margin: 2rem 0;
+        width: 100%;
+    }
+    
+    .total{
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 1rem 0;
+        span{
+           font-weight: bold; 
+        }
+    }
+
+    .pagination{
+
+        div{
+            background-color: $bgc-light;
+            height: 35px;
+            width: 35px;
+            color: $txt-color-primary;
+            fill: $txt-color-primary;
+            &:hover,
+            &:active,
+            &:focus,
+            &.df-center.num.active{
+                cursor: pointer;
+                color: $txt-color-light;
+                fill: $txt-color-light;
+                background-color: $txt-color-primary;
+            }
+            
+            &:first-child{
+                border-radius: 5px 0 0 5px;
+            }
+            &:last-child{
+                border-radius: 0 5px  5px 0;
+            }
+            svg{
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    .controls{
+        justify-content: space-between;
+    }
+}
